@@ -6,13 +6,13 @@
 
 <body>
 
-<h1>ECS + EC2 + RDS Connected... this line changed</h1>
+<h1>ECS + EC2 + RDS Connected ---changed</h1>
 
 <div id="data"></div>
 
 <script>
 
-fetch("http://10.0.3.151:5000")
+fetch("http://load-762096300.ap-south-1.elb.amazonaws.com/")
 .then(res => res.json())
 .then(data => {
  document.getElementById("data").innerHTML =
