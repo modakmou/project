@@ -17,6 +17,9 @@ phases:
       - echo Pushing image...
       - docker push 114614701773.dkr.ecr.ap-south-1.amazonaws.com/demo-ecr:latest
 
-   artifacts:
+      - echo Writing imagedefinitions.json file...
+      - printf '[{"name":"demo-task","imageUri":"%s"}]' 114614701773.dkr.ecr.ap-south-1.amazonaws.com/demo-ecr:latest > imagedefinitions.json
+
+artifacts:
   files:
-    - imagedefinitions.json     
+    - imagedefinitions.json
